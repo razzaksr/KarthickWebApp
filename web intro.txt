@@ -1,0 +1,50 @@
+Application:
+presentation logic >> User Interface
+Businees logic	   >> Middle layer/ control
+data access	   >> Storage where the outcome of application
+
+Windows application:
+MS-WORD >> presentation >> WPF/ Swing
+Business>> C#/java
+Data access>> File system
+
+Billing:
+Data access >> DBMS
+
+Web application:
+static: web page content won't change often
+dynamic: web page content changes based on user visting
+html,css,js>> presentation
+business:
+asp,c#
+jsp,java
+php
+django,flask,python
+javascript
+data access: data base
+
+
+architecture:
+Single tier: 3 logics in single machine
+
+Two tier: client-server
+client: present, business
+server: 3 logics
+
+Three: client-app server-db server
+
+client: request to get application
+app server: business logic, present >> where the application has installed / deployed
+db server: data access logic
+
+N-tier:
+client-proxy server-app server-db server
+proxy server - rules, restrictions/ Internet Service Provider
+
+
+Model View Controller:
+view- present
+control-business
+model-db copy
+
+
