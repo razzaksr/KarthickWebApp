@@ -1,0 +1,41 @@
+Online Bus Portal:
+presentation:
+html:
+components
+
+css:
+styles: color,font,.....
+
+js:
+events
+
+create
+update
+read/search
+list
+delete
+
+
+JSP:
+html tags + java coding
+jsp basic tags
+expression language
+JSTL
+Custom Tags
+
+Servlet: java program
+CreateServlet
+UpdateServlet
+ReadServlet
+ListServlet
+DeleteServlet
+
+Database:JDBC with MySQL using XAMPP
+database: traveller: table fields
+
+Session Management:
+login logout
+
+Web service: SOAP(XML)/REST(xml/json)
+XML:
+Parsing: JAXB
