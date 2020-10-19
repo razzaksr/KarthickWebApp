@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Adding new Bus to Portal</title>
+<title>Update existing Bus to Portal</title>
 <style type="text/css">
 h1{color:blue;background-color: maroon;}
 .add{background-color: aqua;}
@@ -10,7 +10,7 @@ h1{color:blue;background-color: maroon;}
 </head>
 <body style="background-image: url('images/one.png'); background-position: center; position: relative;">
 <div align="center" class="add">
-<h1>Create New Bus</h1>
+<h1>Update An Bus</h1>
 <form name="createBus" action="#">
 <table cellpadding="4" cellspacing="4">
 <tr>
@@ -35,32 +35,18 @@ h1{color:blue;background-color: maroon;}
 </tr>
 <tr>
 <td>Enter the TYPE of the Bus</td>
-<td>
-<input type="radio" name="type" value="Sleeper">Sleeper
-<input type="radio" name="type" value="Semi Sleeper">Semi Sleeper
-<input type="radio" name="type" value="Ultra Delux">Ultra Delux
-<input type="radio" name="type" value="AC Sleeper">AC Sleeper
-</td>
+<td><input type="text" name="type"></td>
 </tr>
 <tr>
 <td>Enter the count of seats in the Bus</td>
-<td>
-<select name="seats">
-<option>Select count of seats</option>
-<option>30</option>
-<option>35</option>
-<option>36</option>
-<option>40</option>
-<option>42</option>
-</select>
-</td>
+<td><input type="text" name="seats"></td>
 </tr>
 <tr>
 <td>Enter the Price of each seat</td>
 <td><input type="text" name="price"></td>
 </tr>
 <tr>
-<td><input type="submit" value="Add"></td>
+<td><input type="submit" value="Update"></td>
 <td><input type="reset" value="clear"></td>
 </tr>
 </table>
