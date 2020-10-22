@@ -9,9 +9,17 @@ h1{color:blue;background-color: maroon;}
 </style>
 </head>
 <body style="background-image: url('images/one.png'); background-position: center; position: relative;">
+<script>
+function simple()
+{
+	var data=document.createBus.travels.value;
+	alert("How you doing? "+data);
+	document.getElementById("status").innerHTML=data;
+}
+</script>
 <div align="center" class="add">
 <h1>Create New Bus</h1>
-<form name="createBus" action="#">
+<form name="createBus" action="#" method="post">
 <table cellpadding="4" cellspacing="4">
 <tr>
 <td>Enter the Registration number of the Bus</td>
@@ -62,9 +70,13 @@ h1{color:blue;background-color: maroon;}
 <tr>
 <td><input type="submit" value="Add"></td>
 <td><input type="reset" value="clear"></td>
+<td><input type="button" value="Check" onclick="simple()"></td>
 </tr>
 </table>
 </form>
+<p id="status"></p>
+<h2><a href="home.html">Back to Home</a></h2>
+<h2><a href="#">Click to logout</a></h2>
 </div>
 </body>
 </html>
