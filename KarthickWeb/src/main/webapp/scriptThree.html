@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Script Three Page</title>
+<script type="text/javascript">
+function verify()
+{
+<!--
+	var oil=document.getElementById("fuel").value;
+	var km=document.getElementById("kms").value;
+	var pass="";
+	pass+="Oil taken for 100kms from filled: "+((oil/km)*100)+"\n";
+	pass+="Oil taken for 50kms from filled: "+((oil/km)*50)+"\n";
+	pass+="Oil taken for 1km from filled: "+(oil/km)+"\n";
+	document.getElementById("result").innerHTML=pass;
+//-->
+}
+</script>
+</head>
+<body>
+<input type="text" name="fuel" id="fuel" placeholder="Liters filled"/>
+<input type="text" name="kms" id="kms" placeholder="KM travelled"/>
+<input type="button" value="Calculate" onclick="verify()"/>
+<h1 id="result"></h1>
+</body>
+</html>

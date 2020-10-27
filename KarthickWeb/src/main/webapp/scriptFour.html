@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Script Fourth Page</title>
+<script>
+function feedback()
+{
+	<!--
+		var hai=prompt("How many projects are done: ","");
+		var esc=prompt("How many escalation occurs: ","");
+		if(esc<=1&&hai>=4)
+		{
+			document.write("U will earn 13 % appraisal");
+		}
+		else{document.write("Please type valid info");}
+	//-->
+}
+function users(geo,land)
+{
+	document.write(geo/land);
+}
+function week(alpha,beta,cosmo)
+{
+	return alpha*alpha*alpha+beta*beta*beta+cosmo*cosmo*cosmo;
+}
+</script>
+</head>
+<body>
+<input type="button" value="Survey" onclick="feedback()"/>
+<input type="button" value="Params" onclick="users(12,90)">
+<input type="button" value="returns" onclick="document.getElementById('hey').innerHTML=week(12,90,10)">
+<ol type="I">
+<li>Select Any</li>
+<li>Iron and Folic</li>
+<li id="hey"></li>
+</ol>
+</body>
+</html>
