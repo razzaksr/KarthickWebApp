@@ -3,27 +3,20 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Adding new Bus to Portal</title>
+<script type="text/javascript" src="scripts/valid.js"></script>
 <style type="text/css">
 h1{color:blue;background-color: maroon;}
 .add{background-color: aqua;}
 </style>
 </head>
 <body style="background-image: url('images/one.png'); background-position: center; position: relative;">
-<script>
-function simple()
-{
-	var data=document.createBus.travels.value;
-	alert("How you doing? "+data);
-	document.getElementById("status").innerHTML=data;
-}
-</script>
 <div align="center" class="add">
 <h1>Create New Bus</h1>
-<form name="createBus" action="#" method="post">
+<form name="create" action="#" method="post">
 <table cellpadding="4" cellspacing="4">
 <tr>
 <td>Enter the Registration number of the Bus</td>
-<td><input type="number" name="regno"></td>
+<td><input type="text" name="regno"></td>
 </tr>
 <tr>
 <td>Enter the Travel company of the Bus</td>
@@ -70,7 +63,7 @@ function simple()
 <tr>
 <td><input type="submit" value="Add"></td>
 <td><input type="reset" value="clear"></td>
-<td><input type="button" value="Check" onclick="simple()"></td>
+<td><input type="button" value="Check" onclick="valid()"></td>
 </tr>
 </table>
 </form>
