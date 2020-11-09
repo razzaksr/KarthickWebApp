@@ -1,0 +1,23 @@
+Server side programming:
+
+jsp>> 
+bean class
+servlet>> pure java program/ business logic: control, db connection
+HttpServlet>> GenericServlet
+HttpServletRequest
+HttpServletResponse
+
+web.xml>> @WebServlet
+
+<servlet>
+<name></name>
+<servlet-class>
+</servlet>
+
+page-servlet
+<form action="servlet">
+</form>
+<a href="servlet">
+
+servlet-page
+RequestDispathcer

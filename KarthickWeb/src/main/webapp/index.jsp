@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +7,10 @@
 <title>SignIn to travels</title>
 </head>
 <body>
+<% String hai=(String)request.getAttribute("info"); 
+if(hai!=null){%>
+<h3 style="color:red;"><%=hai %></h3>
+<%} %>
 <div align="center">
 <form action="log" method="post">
 <table cellpadding="4" cellspacing="4">
