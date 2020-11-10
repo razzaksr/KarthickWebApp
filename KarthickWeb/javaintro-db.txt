@@ -1,0 +1,125 @@
+Database:
+MS SQL
+Oracle
+Mongo
+MySQL>> Oracle
+
+Open source
+Tools:
+Mysql engine>> CLI
+Xampp>> GUI
+
+apache>> 80
+mysql>> 3306
+tomcat
+filezilla
+.
+.
+
+database
+table
+fields/ columns
+
+data types:
+varchar/ String
+int
+double
+bigint/ long
+date
+blob>> binary large object>> images,files
+.
+.
+.
+
+primary key
+auto increment
+
+connectivity:
+odbc
+native
+network
+jdbc:driver
+
+mysql-connector.jar>> Driver.class
+
+steps to connect db:
+1. Driver installation:
+Class.forName("com.mysql.jdbc.Driver")
+// ClassNotFoundException
+
+2. Establish connection: java.sql
+Connection con=DriverManager.getConnection("location of mysqlserver","username","password");
+// SQLException
+
+3. Writing Query:
+String qryObj="";
+
+4. Writing Statements:
+Statement
+PreparedStatement preObj=con.prepareStatement(qryObj);
+
+5. Execution of query:
+preObj.executeQuery>> ResultSet
+preObj.executeUpdate>> int
+
+Structured Query Language:SQL
+
+1. new data base:
+create database 'vijay'
+
+2. new table:
+CREATE TABLE `vijay`.`fathima` (
+`chase` BIGINT( 16 ) NOT NULL ,
+`model` VARCHAR( 50 ) NOT NULL ,
+`price` DOUBLE NOT NULL ,
+`date` DATE NOT NULL ,
+`customer` VARCHAR( 50 ) NOT NULL
+)
+
+3. primary key
+ALTER TABLE `fathima` ADD PRIMARY KEY(`chase`)
+
+4. auto increment/ alter
+ALTER TABLE `fathima` CHANGE `chase` `chase_num` BIGINT( 16 ) NOT NULL AUTO_INCREMENT 
+
+5. table alter
+ALTER TABLE `fathima` CHANGE `chase` `chase_num` BIGINT( 16 ) NOT NULL
+
+ALTER TABLE `fathima` CHANGE `customer` `customer` VARCHAR( 50 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'Mr.ZZZZZZZ'
+
+6. row insertion:
+INSERT INTO `vijay`.`fathima` (
+`chase_num` ,
+`model` ,
+`price` ,
+`date` ,
+`customer`
+)
+VALUES (
+'786321446', 'Pulsar', '89600.5', '2019-10-23', 'Mr.ZZZZZZZ'
+);
+7. update data
+UPDATE `vijay`.`fathima` SET `customer` = 'Miss. Kokila' WHERE `fathima`.`chase_num` =786321446;
+
+8. delete row:
+DELETE FROM `vijay`.`fathima` WHERE `fathima`.`chase_num` = 786321447
+
+9. fetch data:
+syntax: select columns from table where rowrequired
+fetch all:
+SELECT * FROM `fathima`
+fetch single row by primarykey:
+SELECT * FROM `fathima` WHERE `chase_num` = '786321446'
+fetch one column of all row:
+SELECT `date` FROM `fathima`
+fetch one column of one row:
+SELECT `chase_num`FROM `fathima` WHERE `model` = 'pulsar'
+
+10. delete table contents
+TRUNCATE TABLE `fathima`
+
+11. delete table
+DROP TABLE `fathima`
+
+12. delete database
+DROP TABLE `vijay`
