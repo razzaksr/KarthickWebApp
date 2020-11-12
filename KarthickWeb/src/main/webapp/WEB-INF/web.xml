@@ -16,6 +16,24 @@
   	<description></description>
   	<servlet-class>crud.basic.HandleCreate</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>HandleList</servlet-name>
+  	<display-name>HandleList</display-name>
+  	<description></description>
+  	<servlet-class>crud.basic.HandleList</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HandleEdit</servlet-name>
+  	<display-name>HandleEdit</display-name>
+  	<description></description>
+  	<servlet-class>crud.basic.HandleEdit</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HandleUpdate</servlet-name>
+  	<display-name>HandleUpdate</display-name>
+  	<description></description>
+  	<servlet-class>crud.basic.HandleUpdate</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/log</url-pattern>
@@ -23,6 +41,18 @@
   <servlet-mapping>
   	<servlet-name>HandleCreate</servlet-name>
   	<url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HandleList</servlet-name>
+  	<url-pattern>/view</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HandleEdit</servlet-name>
+  	<url-pattern>/edit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HandleUpdate</servlet-name>
+  	<url-pattern>/update</url-pattern>
   </servlet-mapping>
   
 </web-app>
