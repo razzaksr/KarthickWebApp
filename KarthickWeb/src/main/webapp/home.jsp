@@ -20,6 +20,7 @@ if(in!=null){%>
 <tr>
 <td><a href="create.jsp">Adding new coach</a></td>
 <td><a href="view">Listing all coach</a></td>
+<td><a href="shortlist.jsp">Find coach</a></td>
 <td><a href="#">Logout</a></td>
 </tr> 
 </table>

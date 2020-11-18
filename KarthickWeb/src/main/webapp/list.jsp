@@ -11,6 +11,10 @@
 </head>
 <body>
 <%List<Karthi> every=(List<Karthi>)request.getAttribute("all"); %>
+<%String k=(String)request.getAttribute("done");
+if(k!=null){%>
+<%=k %>
+<%} %>
 <div align="center">
 <table class="list" border="4" cellpadding="4" cellspacing="4">
 <tr id="head">
@@ -27,7 +31,7 @@
 <td>
 <ol type="A" id="event">
 <li><a href="edit?single=<%=yet.getRegno()%>">Edit</a></li>
-<li><a href="#">Delete</a></li>
+<li><a href="erase?single=<%=yet.getRegno()%>">Delete</a></li>
 </ol>
 </td>
 </tr>
