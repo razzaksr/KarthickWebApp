@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="styles/coach.css">
 </head>
 <body>
+<% 
+response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.addHeader("Pragma", "no-cache");
+response.addHeader("Expiry", "0");
+String hai=(String)session.getAttribute("who"); 
+if(hai!=null){%>
+<h1>Welcome <%=hai %></h1>
 <%List<Karthi> every=(List<Karthi>)request.getAttribute("all"); %>
 <%String k=(String)request.getAttribute("done");
 if(k!=null){%>
@@ -18,9 +25,15 @@ if(k!=null){%>
 <div align="center">
 <table class="list" border="4" cellpadding="4" cellspacing="4">
 <tr id="head">
-<th>Registration Number</th><th>Travels Name</th><th>Origin</th><th>Destination</th>
-<th>Amenities</th><th>Bus Type/Class</th><th>Number of Seats</th>
-<th>Cost per Seat</th><th>Actions</th>
+<th>Registration Number</th>
+<th>Travels Name</th>
+<th>Origin</th>
+<th>Destination</th>
+<th>Amenities</th>
+<th>Bus Type/Class</th>
+<th>Number of Seats</th>
+<th>Cost per Seat</th>
+<th>Actions</th>
 </tr>
 <%for(Karthi yet:every) {%>
 <tr>
@@ -38,7 +51,10 @@ if(k!=null){%>
 <%} %>
 </table>
 <h2><a href="home.jsp">Back to Home</a></h2>
-<h2><a href="#">Click to logout</a></h2>
+<h2><a href="away">Click to logout</a></h2>
 </div>
+<%} 
+else{
+response.sendRedirect("index.jsp");}%>
 </body>
 </html>

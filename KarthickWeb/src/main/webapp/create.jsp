@@ -12,6 +12,13 @@ h1{color:blue;background-color: maroon;}
 </style>
 </head>
 <body style="background-image: url('images/one.png'); background-position: center; position: relative;">
+<%
+response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+response.addHeader("Pragma", "no-cache");
+response.addHeader("Expiry", "0");
+String hai=(String)session.getAttribute("who"); 
+if(hai!=null){%>
+<h1>Welcome <%=hai %></h1>
 <%String ck=(String)request.getAttribute("info"); 
 if(ck!=null){%>
 <%=ck %>
@@ -75,7 +82,10 @@ if(ck!=null){%>
 </form>
 <p id="status"></p>
 <h2><a href="home.jsp">Back to Home</a></h2>
-<h2><a href="#">Click to logout</a></h2>
+<h2><a href="away">Click to logout</a></h2>
 </div>
+<%} 
+else{
+response.sendRedirect("index.jsp");}%>
 </body>
 </html>
