@@ -65,7 +65,9 @@ if(hai!=null){%>
 <h2><a href="home.jsp">Back to Home</a></h2>
 <h2><a href="away">Click to logout</a></h2>
 </div>
-<%} 
+<%
+
+} 
 else{
 response.sendRedirect("index.jsp");}%>
 </body>

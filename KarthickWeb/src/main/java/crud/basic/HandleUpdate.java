@@ -52,12 +52,12 @@ public class HandleUpdate extends HttpServlet {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
-			String qry="update karthi set regno=?,travels=?,am=?,origin=?,stop=?,type=?, price=?,seats=? where regno=?";
+			String qry="update karthi set regno=?,travels=?,origin=?,stop=?,type=?,am=?, price=?,seats=? where regno=?";
 			PreparedStatement ps=con.prepareStatement(qry);
 			ps.setString(1, a);
 			ps.setString(2, b);ps.setString(3, c);ps.setString(4, d);
-			ps.setString(5, f);ps.setString(6, e);ps.setInt(7, Integer.parseInt(h));
-			ps.setInt(8, Integer.parseInt(g));ps.setString(9, a);;
+			ps.setString(5, e);ps.setString(6, f);ps.setInt(7, Integer.parseInt(g));
+			ps.setInt(8, Integer.parseInt(h));ps.setString(9, a);
 			int ret=ps.executeUpdate();
 			RequestDispatcher dis=request.getRequestDispatcher("home.jsp");
 			if(ret!=0)

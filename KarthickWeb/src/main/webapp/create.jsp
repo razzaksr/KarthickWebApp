@@ -17,12 +17,14 @@ response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 response.addHeader("Pragma", "no-cache");
 response.addHeader("Expiry", "0");
 String hai=(String)session.getAttribute("who"); 
-if(hai!=null){%>
-<h1>Welcome <%=hai %></h1>
-<%String ck=(String)request.getAttribute("info"); 
-if(ck!=null){%>
-<%=ck %>
-<%} %>
+if(hai!=null){
+out.println("<h1>Welcome "+hai+"</h1>");
+String ck=(String)request.getAttribute("info"); 
+if(ck!=null){
+out.println(ck);
+} 
+this.log("About to add new BUS to the travels");
+%>
 <div align="center" class="add">
 <h1>Create New Bus</h1>
 <form name="create" action="add" method="post">
@@ -84,7 +86,14 @@ if(ck!=null){%>
 <h2><a href="home.jsp">Back to Home</a></h2>
 <h2><a href="away">Click to logout</a></h2>
 </div>
-<%} 
+<%
+out.println("Verifying the PageScope: "+pageContext.getAttribute("macro"));
+out.println("Verifying the RequestScope: "+pageContext.getAttribute("delux",PageContext.REQUEST_SCOPE));
+out.println("Verifying the SessionScope: "+pageContext.getAttribute("ultra",PageContext.SESSION_SCOPE));
+out.println("Verifying the ApplicationScope: "+pageContext.getAttribute("micro",PageContext.APPLICATION_SCOPE));
+out.println("<br>"+config.getInitParameter("scooby"));
+out.println("<br>"+application.getInitParameter("app"));
+} 
 else{
 response.sendRedirect("index.jsp");}%>
 </body>

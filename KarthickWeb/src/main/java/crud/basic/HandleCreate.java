@@ -54,8 +54,7 @@ public class HandleCreate extends HttpServlet {
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
 			String qry="insert into karthi(regno,travels,origin,stop,type,am,price,seats) values(?,?,?,?,?,?,?,?)";
 			PreparedStatement ps=con.prepareStatement(qry);
-			ps.setString(1, a);
-			ps.setString(2, b);ps.setString(3, c);ps.setString(4, d);
+			ps.setString(1, a);ps.setString(2, b);ps.setString(3, c);ps.setString(4, d);
 			ps.setString(5, e);ps.setString(6, f);ps.setInt(7, Integer.parseInt(g));
 			ps.setInt(8, Integer.parseInt(h));
 			int ret=ps.executeUpdate();

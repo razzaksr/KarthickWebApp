@@ -12,17 +12,22 @@ response.addHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 response.addHeader("Pragma", "no-cache");
 response.addHeader("Expiry", "0");
 String hai=(String)session.getAttribute("who"); 
-if(hai!=null){%>
-<h1>Welcome <%=hai %> to the HOME</h1>
-<% 
+if(hai!=null){
+out.println("<h1>Welcome "+hai+" to the HOME</h1>");
 for(Cookie c:request.getCookies())
 {
 	out.print(c.getName()+" "+c.getValue());
 }
 String in=(String)request.getAttribute("info"); 
-if(in!=null){%>
-<h3><%=in %> Updated</h3>
-<%} %>
+if(in!=null){
+out.println("<h3>"+in+" Updated</h3>");
+} 
+this.log("Home visted by successfull login");
+pageContext.setAttribute("macro","RedBus",PageContext.PAGE_SCOPE);
+pageContext.setAttribute("micro","GoIbBo",PageContext.APPLICATION_SCOPE);
+pageContext.setAttribute("ultra","JustDial",PageContext.SESSION_SCOPE);
+pageContext.setAttribute("delux","Torrent",PageContext.REQUEST_SCOPE);
+%>
 <div align="center">
 <table cellpadding="4" cellspacing="4">
 <tr>
@@ -33,7 +38,14 @@ if(in!=null){%>
 </tr> 
 </table>
 </div>
-<%} 
+<%
+out.println("Verifying the PageScope: "+pageContext.getAttribute("macro"));
+out.println("Verifying the RequestScope: "+pageContext.getAttribute("delux",PageContext.REQUEST_SCOPE));
+out.println("Verifying the SessionScope: "+pageContext.getAttribute("ultra",PageContext.SESSION_SCOPE));
+out.println("Verifying the ApplicationScope: "+pageContext.getAttribute("micro",PageContext.APPLICATION_SCOPE));
+out.println("<br>"+config.getInitParameter("scooby"));
+out.println("<br>"+application.getInitParameter("app"));
+} 
 else{
 response.sendRedirect("index.jsp");}%>
 </body>
