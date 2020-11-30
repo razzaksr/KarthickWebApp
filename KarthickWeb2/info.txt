@@ -1,0 +1,51 @@
+Implict Objects:
+out>> JspWriter
+request>> HttpServletRequest
+response>> HttpServletResponse
+session>> HttpSession
+page
+config>> ServletConfig
+application>> ServletContext
+pageContext>> PageContext
+
+
+JSP Action Tags:
+<jsp:>
+include
+useBean
+setProperty
+getProperty
+param
+forward
+
+Expression Language:
+${}
+
+JspStandardTagLibrary:
+function
+format
+xml
+sql: dataSource, query,......
+core:
+out
+set
+remove
+catch
+import
+if
+when
+choose
+otherwise
+forEach
+.
+.
+
+jsp:
+<%@ taglib prefix="" uri="tld file"%>
+
+Tag Library Descriptor:
+web-inf>> .tld
+
+lib/jars:
+standard
+jstl
