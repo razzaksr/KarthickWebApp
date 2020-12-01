@@ -10,7 +10,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="cr"%>
 <cr:set var="basic" value="25"/>
 <cr:set var="all" value="8"/>
-${basic }${all }
+<cr:out value="${basic }"/><cr:out value="${all }"/>
 <cr:if test="${basic != 0 && all != 0}">
 <cr:choose>
 <cr:when test="${all <= 5 }">
