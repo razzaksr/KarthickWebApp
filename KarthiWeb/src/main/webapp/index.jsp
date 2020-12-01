@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Intro</title>
 </head>
 <body>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="cr"%>
-
+<form action="second.jsp">
+<input type="text" name="one"><br>
+<input type="text" name="two"><br>
+<input type="submit" value="Enroll">
+</form>
 </body>
 </html>
