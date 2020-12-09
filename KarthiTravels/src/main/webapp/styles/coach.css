@@ -1,0 +1,22 @@
+.list
+{
+	background-image: url('images/one.png') ;
+}
+#head
+{
+	background-color: black;
+	color: white;
+}
+td
+{
+	background-color: yellow;color:maroon;
+}
+td:hover
+{
+	background-color: maroon;color:yellow;
+}
+#event
+{
+	border: 4px;border-style: dotted;border-color: red;
+	color: white;
+}
